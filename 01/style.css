@@ -1,0 +1,81 @@
+*{
+    margin: 0;/*espaços ao redor*/
+    padding: 0;
+    box-sizing: border-box;/*Aqui eu estou resetando essa caixa para que ele possa
+    fazer calculos da borda. No css o calculo da caixa é feito a partir do
+    conteúdo mais os preenchimentos internos. Então se por exemplo eu falo
+    que essa caixa tem que ter 100 de largura, ele vai fazer e vai somar com 
+    essas laterais. E quando eu coloco essa propriedade ele faz os 100 mas
+    não leva em consideração essas laterais*/
+
+}
+
+body{
+    background-color: #1a1924;
+    color: white;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+#app {
+    padding: 24px 32px;
+/* */
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+#user-info img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#user-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#top{
+    display: flex;/*aqui estou colocando um ao lado do outro*/
+    align-items: center;/*aqui estou falando que quero os itens alinhados ao centro*/
+    justify-content: space-between;/*e aqui estou falando pra jogar um espaço entre eles*/
+}
+
+#user-status .status {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-top: 7 px;
+}
+
+#user-status .status::before  {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color:  #00b37e;
+    border-radius: 50%;
+}
+
+#user-status .status  {
+    color: #00b37e;
+    font-size: 12px;
+}
+
+#user-status strong{
+    font-size: 16px;
+}
+
+#last-seen {
+    margin-top: 26px;
+    text-align: center;
+    font-size:12px ;
+    line-height: 14px;
+}
