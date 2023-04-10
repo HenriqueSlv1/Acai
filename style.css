@@ -12,6 +12,7 @@ body{
 #container {
     width: 100%;
     max-width: 588px;
+    min-width: none;
     height: 712px;
     margin: auto;
     
